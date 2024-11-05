@@ -10,13 +10,11 @@ import "./globals.css";
 const geistSans = localFont({
   src: "../assets/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
-  weight: "100 900",
 });
 
 const geistMono = localFont({
   src: "../assets/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
-  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -41,11 +39,11 @@ export default function RootLayout({
           x={-1}
           y={-1}
           className={cn(
-            "stroke-border [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,white,transparent)]"
+            "stroke-border z-0 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,white,transparent)]"
           )}
         />
         <Navbar />
-        {children}
+        <main className="relative">{children}</main>
       </body>
     </html>
   );
