@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import Navbar from "@/components/navigation/navbar";
+import GridPattern from "@/components/ui/grid-pattern";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
@@ -10,6 +12,7 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "../assets/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -32,9 +35,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.className} ${geistMono.variable} antialiased`}
       >
-        <div
-          id="home"
-          className="absolute inset-0 h-full bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)]"
+        <GridPattern
+          width={48}
+          height={48}
+          x={-1}
+          y={-1}
+          className={cn(
+            "stroke-border [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,white,transparent)]"
+          )}
         />
         <Navbar />
         {children}
