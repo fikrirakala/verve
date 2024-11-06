@@ -2,10 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 import { motion } from "framer-motion";
 import Hamburger from "hamburger-react";
+
+import { cn } from "@/lib/utils";
 
 import { Button } from "../ui/button";
 import MobileNav from "./mobile-nav";
@@ -31,6 +34,8 @@ const NAV_LINKS = [
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
+
+  const pathname = usePathname();
 
   const ref = useRef(null);
   const [scroll, setScroll] = useState(false);
@@ -75,16 +80,34 @@ export default function Navbar() {
           <Link href="/" className="z-50 flex-1">
             <Image src="/logo.svg" alt="Logo" width={100} height={32} />
           </Link>
-          <nav className="hidden gap-12 lg:flex">
-            {NAV_LINKS.map((link) => (
-              <Link key={link.title} href={link.href}>
-                {link.title}
-              </Link>
-            ))}
+          <nav className="hidden gap-4 lg:flex">
+            {NAV_LINKS.map((link) => {
+              const isActive =
+                (pathname.includes(link.href) && link.href.length > 1) ||
+                pathname === link.href;
+
+              return (
+                <Link
+                  key={link.title}
+                  href={link.href}
+                  className={cn(
+                    "flex h-11 items-center rounded-full border border-transparent px-5 py-2 text-sm hover:border hover:border-white/10 hover:bg-white/[0.04] hover:backdrop-blur-xl",
+                    isActive &&
+                      "border-white/10 bg-white/[0.04] backdrop-blur-xl"
+                  )}
+                >
+                  {link.title}
+                </Link>
+              );
+            })}
           </nav>
           <div className="flex flex-1 justify-end">
-            <Button asChild className="hidden lg:flex">
-              <Link href="/login">Login</Link>
+            <Button
+              asChild
+              variant="secondary"
+              className="hidden rounded-full lg:flex"
+            >
+              <Link href="/contact">Contact Sales</Link>
             </Button>
             <div className="lg:hidden">
               <Hamburger toggled={isOpen} toggle={setOpen} size={24} />

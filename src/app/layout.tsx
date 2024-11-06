@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import Navbar from "@/components/navigation/navbar";
-import GridPattern from "@/components/ui/grid-pattern";
-import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
@@ -31,19 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.className} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} ${geistMono.variable} bg-[url('/bg/stars.svg')] antialiased`}
       >
-        <GridPattern
-          width={48}
-          height={48}
-          x={-1}
-          y={-1}
-          className={cn(
-            "stroke-border z-0 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,white,transparent)]"
-          )}
-        />
         <Navbar />
-        <main className="relative">{children}</main>
+        <main className="relative pt-20">{children}</main>
       </body>
     </html>
   );
