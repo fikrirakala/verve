@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${geistSans.className} ${geistMono.variable} bg-[url('/bg/stars.svg')] antialiased`}
       >
         <Navbar />
-        <main className="relative pt-20">{children}</main>
+        <main className="relative mx-auto w-full pt-20">{children}</main>
         <CtaSection />
         <Footer />
       </body>

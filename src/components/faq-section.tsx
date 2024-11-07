@@ -36,8 +36,8 @@ const faqs = [
 
 export default function FaqSection() {
   return (
-    <section className="relative py-28">
-      <div className="relative z-10 mx-auto max-w-screen-xl px-4">
+    <section className="relative overflow-hidden py-28">
+      <div className="relative z-10 mx-auto max-w-screen-xl overflow-hidden px-4">
         <div className="w-full">
           <div className="mb-16 flex w-full max-w-3xl flex-col items-start">
             <Badge>FAQ</Badge>
@@ -83,7 +83,7 @@ export default function FaqSection() {
         <img
           src="/bg/faq-light.svg"
           alt=""
-          className="absolute left-[450px] top-0 mix-blend-soft-light"
+          className="absolute left-[100px] top-0 mix-blend-soft-light md:left-[200px] lg:left-[450px]"
         />
       </div>
     </section>

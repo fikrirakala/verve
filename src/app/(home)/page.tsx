@@ -6,11 +6,11 @@ import Hero from "./hero";
 
 export default function HomePage() {
   return (
-    <div className="min-h-[2000px]">
+    <>
       <Hero />
       <CompaniesSection />
       <FeaturesSection />
       <FaqSection />
-    </div>
+    </>
   );
 }
