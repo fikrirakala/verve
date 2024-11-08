@@ -123,7 +123,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative grid cursor-pointer gap-4 overflow-hidden rounded-xl border p-6"
+        "relative grid cursor-pointer gap-4 overflow-hidden rounded-2xl border bg-white/[0.01] p-6"
       )}
     >
       <div className="flex flex-row items-center gap-3">
