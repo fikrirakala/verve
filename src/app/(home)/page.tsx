@@ -1,3 +1,4 @@
+import BenefitsSection from "@/components/benefits-sections";
 import RecentBlog from "@/components/blog/recent-blog";
 import CompaniesSection from "@/components/companies-section";
 import FaqSection from "@/components/faq-section";
@@ -11,6 +12,7 @@ export default function HomePage() {
     <>
       <Hero />
       <CompaniesSection />
+      <BenefitsSection />
       <FeaturesSection />
       <FaqSection />
       <TestimonialsSection />
