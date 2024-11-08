@@ -1,3 +1,4 @@
+import RecentBlog from "@/components/blog/recent-blog";
 import CompaniesSection from "@/components/companies-section";
 import FaqSection from "@/components/faq-section";
 import FeaturesSection from "@/components/features-section";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <FeaturesSection />
       <FaqSection />
       <TestimonialsSection />
+      <RecentBlog />
     </>
   );
 }
