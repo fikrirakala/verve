@@ -1,3 +1,9 @@
+import FaqSection from "@/components/faq-section";
+
 export default function BlogPage() {
-  return <div>page</div>;
+  return (
+    <>
+      <FaqSection />
+    </>
+  );
 }
