@@ -35,8 +35,10 @@ export default function BenefitsSection() {
         <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-24">
           <div className="flex w-full max-w-2xl flex-col items-start">
             <Badge>Product Overview</Badge>
-            <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-              Discover a simple notebook solution today.
+            <h2 className="mt-4">
+              <span className="text-gradient">
+                Discover a simple notebook solution today.
+              </span>
             </h2>
           </div>
           <div className="">
@@ -95,7 +97,9 @@ function BenefitCard({
           <img src={icon} alt="Icon" />
         </div>
         <div className="flex flex-col gap-3">
-          <h3 className="text-3xl font-medium">{title}</h3>
+          <h3>
+            <span className="text-gradient">{title}</span>
+          </h3>
           <p className="text-muted-foreground">{description}</p>
         </div>
       </div>

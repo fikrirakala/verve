@@ -26,8 +26,8 @@ export default function BlogCard({
         />
       </div>
       <div className="flex flex-col gap-3">
-        <h5 className="line-clamp-1 text-2xl font-medium">{title}</h5>
-        <p className="text-muted-foreground line-clamp-2">{description}</p>
+        <h4>{title}</h4>
+        <p className="line-clamp-2 text-muted-foreground">{description}</p>
       </div>
     </Link>
   );

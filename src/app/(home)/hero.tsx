@@ -8,11 +8,13 @@ export default function Hero() {
     <section className="py-24">
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="text-center">
-          <h1 className="mb-6 bg-gradient-to-t from-white to-white/60 bg-clip-text text-7xl font-medium leading-tight tracking-tight text-transparent">
-            Deliver an enterprise quality <br className="hidden lg:block" />{" "}
-            project in minutes
+          <h1 className="mb-6">
+            <span className="text-gradient">
+              Deliver an enterprise quality <br className="hidden md:block" />{" "}
+              project in minutes
+            </span>
           </h1>
-          <p className="text-muted-foreground mb-12 text-balance text-lg tracking-tight">
+          <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl">
             Beautifully designed, animated components and templates built with{" "}
             <br className="hidden md:block" /> Next.js, Tailwind CSS, React, and
             Framer Motion.

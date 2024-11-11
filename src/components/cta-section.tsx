@@ -11,8 +11,10 @@ export default function CtaSection() {
       <div className="relative z-10 mx-auto max-w-screen-lg px-4">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col gap-6">
-            <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-              Start Your <br className="hidden lg:block" /> 7-day free trial
+            <h2>
+              <span className="text-gradient">
+                Start Your <br className="hidden lg:block" /> 7-day free trial
+              </span>
             </h2>
             <ul className="flex flex-wrap items-center gap-4">
               {features.map((item) => (
@@ -40,7 +42,7 @@ export default function CtaSection() {
               <Button asChild size="lg" className="rounded-full">
                 <Link href="/">Get started</Link>
               </Button>
-              <div className="text-muted-foreground flex flex-col gap-1 text-sm">
+              <div className="flex flex-col gap-1 text-sm text-muted-foreground">
                 <p>4.80/5</p>
                 <p>From 300+ Customer Reviews</p>
               </div>

@@ -53,8 +53,8 @@ export default function TestimonialsSection() {
       <div className="mx-auto w-full max-w-screen-xl px-4">
         <div className="mb-16 text-center">
           <Badge>Testimonials</Badge>
-          <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-            Hear feedback from our users
+          <h2 className="mt-4">
+            <span className="text-gradient">Hear feedback from our users</span>
           </h2>
         </div>
 
@@ -65,7 +65,9 @@ export default function TestimonialsSection() {
                 <Image src={stat.icon} alt="Icon" width={24} height={24} />
               </div>
               <div className="grid gap-2 text-center">
-                <h3 className="text-4xl font-medium">{stat.title}</h3>
+                <h3>
+                  <span className="text-gradient">{stat.title}</span>
+                </h3>
                 <p className="text-muted-foreground">{stat.description}</p>
               </div>
             </div>
@@ -130,7 +132,7 @@ const ReviewCard = ({
         <img className="rounded-full" width="40" height="40" alt="" src={img} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium">{name}</figcaption>
-          <p className="text-muted-foreground text-xs font-medium">
+          <p className="text-xs font-medium text-muted-foreground">
             {username}
           </p>
         </div>

@@ -41,10 +41,10 @@ export default function FaqSection() {
         <div className="w-full">
           <div className="mb-16 flex w-full max-w-3xl flex-col items-start">
             <Badge>FAQ</Badge>
-            <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-              Frequently asked questions
+            <h2 className="mt-4">
+              <span className="text-gradient">Frequently asked questions</span>
             </h2>
-            <p className="text-muted-foreground mt-4 text-lg">
+            <p className="mt-4 text-lg text-muted-foreground">
               For any other questions, feel welcome to reach out to our team.
             </p>
           </div>
@@ -52,8 +52,10 @@ export default function FaqSection() {
             <Accordion type="single" collapsible>
               {faqs.map((item, i) => (
                 <AccordionItem key={i} value={`item-${i}`} className="py-3">
-                  <AccordionTrigger>{item.title}</AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base">
+                  <AccordionTrigger className="text-left text-base">
+                    {item.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground">
                     {item.description}
                   </AccordionContent>
                 </AccordionItem>

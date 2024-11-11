@@ -45,9 +45,11 @@ export default function FeaturesSection() {
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="mb-14 text-center">
           <Badge>Features Overview</Badge>
-          <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-            Build a solution that wins you <br className="hidden lg:block" />{" "}
-            more customers.
+          <h2 className="mt-4">
+            <span className="text-gradient">
+              Build a solution that wins you <br className="hidden lg:block" />{" "}
+              more customers.
+            </span>
           </h2>
         </div>
 
@@ -64,7 +66,7 @@ export default function FeaturesSection() {
                 height={48}
               />
               <div className="flex flex-col gap-3">
-                <h5 className="text-2xl font-medium">{feature.title}</h5>
+                <h4>{feature.title}</h4>
                 <p className="text-muted-foreground">{feature.description}</p>
               </div>
             </div>

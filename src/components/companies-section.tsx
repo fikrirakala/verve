@@ -28,8 +28,10 @@ export default function CompaniesSection() {
     <section className="py-20">
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="mb-12 text-center">
-          <h2 className="bg-gradient-to-t from-white to-white/60 bg-clip-text text-3xl font-medium text-transparent">
-            The world&apos;s best companies trust Verve.
+          <h2 className="text-3xl font-medium">
+            <span className="text-gradient">
+              The world&apos;s best companies trust Verve.
+            </span>
           </h2>
         </div>
         <div className="relative w-full overflow-hidden">

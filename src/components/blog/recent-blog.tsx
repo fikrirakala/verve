@@ -32,12 +32,12 @@ export default function RecentBlog() {
         <div className="mb-16 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-24">
           <div className="flex w-full max-w-lg flex-col items-start">
             <Badge>Recent Articles</Badge>
-            <h2 className="mt-4 bg-gradient-to-tl from-white to-white/60 bg-clip-text text-5xl font-medium leading-tight tracking-tight text-transparent lg:text-6xl">
-              Blog &amp; Articles
+            <h2>
+              <span className="text-gradient">Blog &amp; Articles</span>
             </h2>
           </div>
           <div className="w-full max-w-xl">
-            <p className="text-muted-foreground text-lg">
+            <p className="text-lg text-muted-foreground">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
               alias consequatur laboriosam.
             </p>
