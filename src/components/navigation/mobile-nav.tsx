@@ -27,7 +27,7 @@ export default function MobileNav({ isOpen }: { isOpen: boolean }) {
   return (
     <>
       {isOpen && (
-        <div className="fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col bg-background px-4 pb-4 pt-20">
+        <div className="fixed bottom-0 left-0 right-0 top-0 z-40 flex flex-col bg-background px-4 pb-4 pt-20 lg:hidden">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
@@ -37,7 +37,11 @@ export default function MobileNav({ isOpen }: { isOpen: boolean }) {
               {link.title}
             </Link>
           ))}
-          <Button asChild className="mt-5 w-full">
+          <Button
+            variant="secondary"
+            asChild
+            className="mt-5 w-full rounded-full"
+          >
             <Link href="/login">Login</Link>
           </Button>
         </div>
