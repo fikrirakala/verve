@@ -82,6 +82,6 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-b from-[rgba(250,250,250,0.5)] to-[rgb(250,250,250)_50%] bg-clip-text text-transparent;
+    @apply bg-gradient-to-b from-[rgba(250,250,250,0.5)] to-[rgb(250,250,250)_75%] bg-clip-text text-transparent;
   }
 }

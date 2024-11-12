@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Image from "next/image";
 
 import CtaSection from "@/components/cta-section";
 import Footer from "@/components/footer";
@@ -33,6 +34,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.className} ${geistMono.variable} bg-[url('/bg/stars.svg')] antialiased`}
       >
+        <div className="absolute bottom-auto left-0 right-0 top-0 z-0 mx-auto flex h-[908px] w-full max-w-[2400px] items-start justify-center overflow-hidden">
+          <div className="absolute bottom-auto left-0 right-0 top-0 z-[2] h-[764px] w-full flex-none bg-[radial-gradient(circle_at_50%_-40%,rgba(76,202,187,0.42),rgb(10,10,10)_65%)]"></div>
+          <Image
+            src="/bg/hero-pattern.svg"
+            alt=""
+            width={2400}
+            height={890}
+            className="absolute -top-6 bottom-auto left-auto right-auto z-[1] h-[764px] w-[2400px] max-w-none opacity-55 mix-blend-soft-light"
+          />
+        </div>
+
         <Navbar />
         <main className="relative mx-auto w-full pt-20">{children}</main>
         <CtaSection />
