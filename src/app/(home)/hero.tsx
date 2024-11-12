@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
@@ -8,7 +9,8 @@ export default function Hero() {
     <section className="py-24">
       <div className="mx-auto max-w-screen-xl px-4">
         <div className="text-center">
-          <h1 className="mb-6">
+          <Badge>Verve Product Overview</Badge>
+          <h1 className="mb-6 mt-6">
             <span className="text-gradient">
               Deliver an enterprise quality <br className="hidden md:block" />{" "}
               project in minutes
