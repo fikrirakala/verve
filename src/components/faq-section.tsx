@@ -74,12 +74,12 @@ export default function FaqSection() {
 
       <div className="absolute bottom-0 left-0 right-0 top-0 z-0 overflow-hidden">
         <GridPattern
-          width={48}
-          height={48}
+          width={40}
+          height={40}
           x={-1}
           y={-1}
           className={cn(
-            "stroke-white/[0.05] [mask-image:linear-gradient(to_bottom_left,white,transparent_50%,transparent)]"
+            "stroke-white opacity-5 [mask-image:linear-gradient(to_bottom_left,white,transparent_50%,transparent)]"
           )}
         />
         <img

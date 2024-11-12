@@ -68,7 +68,7 @@ export default function Navbar() {
           notOnTop: {
             backgroundColor: "rgb(10 10 10 / 0.4)",
             backdropFilter: "blur(12px)",
-            borderBottom: "solid 1px rgb(10 10 10 / 0.8)",
+            borderBottom: "solid 1px rgb(255 255 255 / 0.08)",
           },
         }}
         initial="hidden"
