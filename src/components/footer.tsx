@@ -1,7 +1,59 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from "./ui/button";
+const footerLinks = [
+  {
+    title: "Product",
+    links: [
+      {
+        title: "Features",
+        href: "/",
+      },
+      {
+        title: "Integrations",
+        href: "/",
+      },
+      {
+        title: "Pricing",
+        href: "/",
+      },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      {
+        title: "About",
+        href: "/",
+      },
+      {
+        title: "Careers",
+        href: "/",
+      },
+      {
+        title: "Contact",
+        href: "/",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      {
+        title: "Blog",
+        href: "/",
+      },
+      {
+        title: "Terms of Service",
+        href: "/",
+      },
+      {
+        title: "Privacy Policy",
+        href: "/",
+      },
+    ],
+  },
+];
 
 export default function Footer() {
   return (
@@ -16,40 +68,29 @@ export default function Footer() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit nobis
               quasi earum.
             </p>
-            <Button variant="secondary" className="rounded-full">
-              (01) 123 456 7890
-            </Button>
           </div>
-          <div className="grid grid-cols-2">
-            <div className="flex min-w-[180px] flex-col gap-5">
-              <h6 className="text-muted-foreground font-medium">Product</h6>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-            </div>
-            <div className="flex min-w-[180px] flex-col gap-5">
-              <h6 className="text-muted-foreground font-medium">Features</h6>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-              <Link href="/" className="hover:text-primary">
-                Verve Footer Link
-              </Link>
-            </div>
+          <div className="grid grid-cols-3 gap-8">
+            {footerLinks.map((link) => (
+              <div key={link.title} className="flex flex-col gap-5">
+                <h6 className="font-medium text-muted-foreground">
+                  {link.title}
+                </h6>
+                {link.links.map((item) => (
+                  <Link
+                    key={item.title}
+                    href={item.href}
+                    className="hover:text-primary"
+                  >
+                    {item.title}
+                  </Link>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="flex flex-col items-center justify-between gap-8 border-t py-14 md:flex-row">
-          <div className="text-muted-foreground">&copy;2024 Verve</div>
+          <div className="text-muted-foreground">&copy;2024 Verve.</div>
           <div className="flex justify-end gap-4">
             <Link
               href="/"
